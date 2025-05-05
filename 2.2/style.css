@@ -1,0 +1,24 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    outline: solid 1px red;
+}
+
+.container{
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.filas{
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.items img{
+    height: 120px;
+}
