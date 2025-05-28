@@ -1,0 +1,93 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: solid white 3vh;
+}
+
+body{
+    padding: 0 3vh;
+    outline: solid white 3vh;
+}
+
+div{
+    background-color: #B3B5B4;
+}
+
+.izquierda, .derecha{
+    background-color: white;
+}
+
+main{
+    display: flex;
+    height: 100vh;
+    width: 40%;
+}
+
+.container{
+    flex: 1;
+    display: flex;
+    margin-top: 3vh;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.izquierda{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.derecha{
+    flex: 2;
+}
+
+.primero{
+    height: 70vh;
+    flex: 1;
+}
+
+.segundo{
+    flex: 1;
+    outline: white solid 1.5vh;
+    height: 25vh;
+    width: 25vh;
+}
+
+.tercero{
+    flex: 1;
+    outline: white solid 1.5vh;
+    height: 25vh;
+    width: 25vh;
+}
+
+.cuarto{
+    outline: solid white 2.5vh;
+}
+
+
+.sexto{
+    flex: 1;
+    height: 70vh;
+    margin-top: 3vh;
+    width: 38vh;
+}
+
+.quinto{
+    height: 25vh;
+    flex: 1;
+    outline: solid white ;
+    width: 38vh;
+}
+
+.sexto{
+    flex: 1;
+    height: 70vh;
+    margin-top: 3vh;
+    width: 38vh;
+}
