@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: solid 1px rgb(224, 65, 65);
+}
+
+.arriba{
+    color: aliceblue;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #33495d;
+    padding: 30px 20px;
+}
+
+body{
+    background-color: #fdf6eb;
+}
+
+.principal{
+background-color: ;
+}
+
+.primero{
+    margin: 20px;
+    background-color: #e67e22;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+
+h2{
+    color: aliceblue;
+}
+
+p{
+    margin: 10px;
+    color: aliceblue;
+}
