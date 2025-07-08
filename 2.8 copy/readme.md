@@ -2,7 +2,7 @@
 
 Este repositorio contiene el desarrollo de una aplicación web básica con funcionalidad **CRUD (Crear, Leer, Actualizar, Eliminar)**, orientada al registro y gestión de viajes. Está diseñado con fines educativos para apoyar la enseñanza del desarrollo web con **HTML, CSS,**.
 
-**Correo de contacto:** martinloncon@liceovvh.cl
+**Correo de contacto:** martinloncon@liceovvh.cl / damianoyarce@liceovvh.cl
 
 ---
 
