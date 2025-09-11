@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Desafío de arreglos en js</title>
+    <!-- Enlace CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
 </head>
@@ -126,8 +127,62 @@
             <section class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Ejercicio 7: Historia de mensajes</h5>
-                        <input type="text" class="form-control" id="mensaje" />
+                        <h5 class="card-title">Ejercicio 7: Historial de mensajes</h5>
+                        <input type="text" class="form-control" id="lista7">
+                        <ul class="list-group mb-3" id="resultado7"></ul>
+                        <div id="mensajeEliminado7" class="alert alert-warning d-none"></div>
+                        <button onclick="agregarHistorial()" class="btn btn-primary">Agregar mensaje</button>
+                        <button onclick="eliminarUltimoMensaje()" class="btn btn-danger">Eliminar último
+                            mensaje</button>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ejercicio 8: Cola de atención</h5>
+                        <input type="text" class="form-control" id="lista8" />
+                        <ul class="list-group mb-3" id="resultado8"></ul>
+                        <button onclick="agregarClienteCola()" class="btn btn-primary">
+                            Agregar cliente
+                        </button>
+                        <button onclick="atenderCliente()" class="btn btn-danger">
+                            Atender cliente
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="row mt-4">
+            <section class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ejercicio 9: Reordenar nombres</h5>
+                        <input type="text" class="form-control" id="lista9">
+                        <ul class="list-group mb-3" id="resultado9"></ul>
+                        <button onclick="reordenarNombres()" class="btn btn-primary">Reordenar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ejercicio 10: Colas</h5>
+                        <p>Cola</p>
+                        <input type="text" class="form-control" id="lista10b">
+                        <ul class="list-group mb-3" id="resultado10b"></ul>
+                        <p>Pila</p>
+                        <input type="text" class="form-control" id="lista10a">
+                        <ul class="list-group mb-3" id="resultado10a"></ul>
+                        <button onclick="agregarElementoCola()" class="btn btn-primary">Agregar a cola</button>
+                        <button onclick="quitarElementoCola()" class="btn btn-danger">Atender en cola</button>
+                        <button onclick="agregarElementoPila()" class="btn btn-primary">Agregar a pila</button>
+                        <button onclick="quitarElementoPila()" class="btn btn-danger">Atender en pila</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
     <script src="script.js"></script>
     <!-- Enlace JS Boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"

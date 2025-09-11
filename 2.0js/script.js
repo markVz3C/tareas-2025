@@ -197,45 +197,161 @@ function cargarOrdenInverso() {
     mostrarListaOrden();
 }
 
+//ejercicio 7
 let historial = [];
-let eliminados =
-function mostrarMensajes() {
+
+function agregarHistorial() {
+    const input = document.getElementById("lista7");
+    const valor = input.value.trim();
+
+    if (valor === "") return;
+
+    historial.push(valor); // Agrega mensaje al final
+    input.value = "";
+    input.focus();
+
+    mostrarHistorial();
+}
+
+function eliminarUltimoMensaje() {
+    if (historial.length === 0) return;
+
+    const eliminado = historial.pop(); // Elimina el último mensaje
+
+    // Mostrar mensaje eliminado
+    const alerta = document.getElementById("mensajeEliminado7");
+    alerta.textContent = `Mensaje eliminado: "${eliminado}"`;
+    alerta.classList.remove("d-none");
+
+    mostrarHistorial();
+}
+
+function mostrarHistorial() {
     const lista = document.getElementById("resultado7");
     lista.innerHTML = "";
 
     for (let i = 0; i < historial.length; i++) {
         const li = document.createElement("li");
-        li.className = "list-group-item d-flex justify-content-between align-items-center mb-2";
-        li.textContent = `- ${historial[i]}`;
+        li.className = "list-group-item";
+        li.textContent = historial[i];
         lista.appendChild(li);
     }
 }
 
-function MostrarEliminados() {
-    const lista = document.getElementById("eliminados");
+//ejercicio 8
+let cola = ["Cliente1", "Cliente2", "Cliente3"];
+
+function mostrarCola() {
+    const lista = document.getElementById("resultado8");
     lista.innerHTML = "";
-
-    for (let i = 0; i < eliminados.length; i++) {
-    li
+    for (let i = 0; i < cola.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.textContent = cola[i];
+        lista.appendChild(li);
     }
 }
 
-function eliminarUltimo() {
-    if (historial.length > 0) {
-        const borrados = historial.pop(); // Elimina el último elemento del arreglo
-        eliminados.push(borrados); // Agrega el elemento eliminado al arreglo de eliminados
-        input.focus(); // Agrega foco hacia el input
-        mostrarMensajes(); // Actualiza la lista en pantalla
-        MostrarEliminados(); // Actualiza la lista de eliminados
+function agregarClienteCola() {
+    const input = document.getElementById("lista8");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    cola.push(valor);
+    input.value = "";
+    input.focus();
+    mostrarCola();
+}
+
+function atenderCliente() {
+    cola.shift(); // Elimina el primero
+    mostrarCola();
+}
+
+let nombres = ["Pedro", "Juan", "Luis"];
+
+function reordenarNombres() {
+    const input = document.getElementById("lista9");
+    const valor = input.value.trim();
+
+    if (valor === "") return;
+
+    nombres.pop(); // Eliminar siempre el último elemento
+
+    if (valor === "Mateo") {
+        nombres.unshift(valor); // Agrega Mateo al inicio
+    } else if (valor === "Ana") {
+        nombres.push(valor); // Agrega Ana al final
+    } else {
+        // No se agrega nada si no es Mateo ni Ana
+        alert("Solo puedes ingresar 'Mateo' o 'Ana'");
+    }
+
+    input.value = "";
+    input.focus();
+
+    const lista = document.getElementById("resultado9");
+    lista.innerHTML = "";
+    for (let i = 0; i < nombres.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.textContent = nombres[i];
+        lista.appendChild(li);
     }
 }
 
-function agregarFinal (){
-    const input = document.getElementById("lista7")
-    const valor = input.value.trim(); //guarda valor sin espacios extras
-    if (valor === "") return; // Si el valor está vacío, no hacemos nada
-    historial.push(valor); // Agrega el valor al final
-    input.value = ""; // Limpia el campo de entrada
-    input.focus(); // Agrega foco hacia el input
-    mostrarMensajes(); // Actualiza la lista en pantalla
+
+//ejercicio 10
+let pila = [];
+let colaNueva = [];
+
+function mostrarPila() {
+    const lista = document.getElementById("resultado10a");
+    lista.innerHTML = "";
+    for (let i = 0; i < pila.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.textContent = pila[i];
+        lista.appendChild(li);
+    }
+}
+
+function agregarElementoPila() {
+    const input = document.getElementById("lista10a");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    pila.push(valor);
+    input.value = "";
+    input.focus();
+    mostrarPila();
+}
+
+function quitarElementoPila() {
+    pila.pop();
+    mostrarPila();
+}
+
+function mostrarColaNueva() {
+    const lista = document.getElementById("resultado10b");
+    lista.innerHTML = "";
+    for (let i = 0; i < colaNueva.length; i++) {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.textContent = colaNueva[i];
+        lista.appendChild(li);
+    }
+}
+
+function agregarElementoCola() {
+    const input = document.getElementById("lista10b");
+    const valor = input.value.trim();
+    if (valor === "") return;
+    colaNueva.push(valor);
+    input.value = "";
+    input.focus();
+    mostrarColaNueva();
+}
+
+function quitarElementoCola() {
+    colaNueva.shift();
+    mostrarColaNueva();
 }
