@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Dojonary</title>
+</head>
+<body>
+    <nav>
+        <h1 class="nav-bar">Dojonary</h1>
+        <div class="label">
+            <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button id="login-btn" type="button" class="btn btn-primary" onclick="login(this)">Login</button>
+    </nav>
+
+    <div class="container">
+        <div class="izquierda">
+            <div class="card">
+                <div class="columna-izquierda">
+                    <h2>ninja</h2>
+                    <div class="info-palabra">
+                        <span class="label-word">noun</span>
+                        <span class="plural-text">Plural: ninjas</span>
+                    </div>
+                    <button id="like-btn-1" class="like-btn" onclick="likeBtn(this)"><span id="span">13 likes</span></button>
+                </div>
+                <div class="contenido">
+                    <p class="definition">A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="columna-izquierda">
+                    <h2>ninja</h2>
+                    <div class="info-palabra">
+                        <span class="label-word">noun</span>
+                        <span class="plural-text">Plural: ninjas</span>
+                    </div>
+                    <button id="like-btn-2" class="like-btn" onclick="likeBtn(this)"><span id="span">37 likes</span></button>
+                </div>
+                <div class="contenido">
+                    <p class="definition">A programmer who breaks down problems with <a href="#">zen-like</a> focus</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="derecha">
+            <div class="aside-box">
+                <p class="aside-title">Dojonary is defined by <span class="you">YOU</span></p>
+                <button id="add-def-btn" class="add-def-btn" onclick="hide(this)">Add Definition</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="static/js/script.js"></script>
+</body>
+</html>
